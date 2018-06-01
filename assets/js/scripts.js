@@ -21,6 +21,24 @@ $(document).ready( function (){
 		};
 	});
 
+// PARA HACER CAMBIAR LA IMAGEN 
+// Llamo al selector con su id en este caso, y le decimos que al cambiar la funcion, se gatille el evento 
+	$('#image').on('change', function(event){
+		// guardamos en una variable el src base
+		var link = 'assets/images/squared/'
+		// sacar el valor del evento gatillado 
+		var valor = $(event.target).val();
+		// asignadas las dos variables, ahora llamaremos a la clase '.create__image img'
+		// y le asignaremos atributo de las dos variables.
+		$('.create__image img').attr('src', link + valor);
 
+	})
+
+//para cambiar el autor lo mismo de arriba, diferentes links y variebles
+	$('#author').on('change', function(event){
+		var autor = 'assets/images/profiles/'
+		var autor__valor = $(event.target).val();
+		$('.create__profile img').attr('src', autor + autor__valor);
+	})
 
 });
