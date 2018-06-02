@@ -29,14 +29,14 @@ $(document).ready( function (){
 	});
 
 // click para like 
-	$('.card__content').on('click', '.card__like', function(event){
-		event.stopPropagation();
+	$('.cards').on('click', '.card__like', function(event){
 		event.preventDefault();
+		event.stopPropagation();
 		$(this).toggleClass('card__like--red');
 	});
 
 // click para seguir 
-	$('.card__follow-btn').on('click', function(event){
+	$('.cards').on('click','.card__follow-btn', function(event){
 		event.stopPropagation();
 		$(this).toggleClass('card__follow-btn--following');
 
