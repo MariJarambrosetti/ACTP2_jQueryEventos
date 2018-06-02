@@ -134,9 +134,19 @@ $(document).ready( function (){
 						'<div class="card__follow"><button class="card__follow-btn">Seguir</button></div>'+
 					'</div>'+
 				'</div>'+
-			'</li>'
+			'</li>');
 
-		);
+	     $("input[type=text]").each(function() { 
+	     	this.value = '';
+	     });
+
+	    newimage = $('.create__image img').attr('src', 'assets/images/squared/uk.png');
+		imagen_selec = $('#image').val('uk.png');
+
+		nuevoautor = $('.create__profile img').attr('src', 'assets/images/profiles/uk.png');
+		autor_selec = $('#author').val('uk.png');
+
+
 	});
 
 
